@@ -5,6 +5,7 @@ on:
     - cron: '0 1 * * *'
   issues:
     types: [labeled]
+  workflow_dispatch: {}
 jobs:
   timelapse:
     runs-on: ubuntu-20.04
