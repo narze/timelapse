@@ -2,7 +2,7 @@ name: Timelapse
 on:
   push: {}
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '0 */1 * * *'
   issues:
     types: [labeled]
   workflow_dispatch: {}
