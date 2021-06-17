@@ -10,6 +10,7 @@ jobs:
   timelapse:
     runs-on: ubuntu-20.04
     if: |
+      (github.event_name == 'workflow_dispatch') ||
       (github.event_name == 'schedule') ||
       (github.event_name == 'push') ||
       (github.event_name == 'issues' && github.event.action == 'labeled' && github.event.issue.number == 1 && github.event.issue.labels[0].name == 'trigger')
