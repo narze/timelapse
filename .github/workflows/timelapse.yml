@@ -27,9 +27,9 @@ jobs:
       - run: yarn
       - run: node main.js
         env:
-          GIT_COMMITTER_NAME: dtinth-bot
-          GIT_AUTHOR_NAME: dtinth-bot
-          EMAIL: dtinth-bot@users.noreply.github.com
+          GIT_COMMITTER_NAME: notbarze
+          GIT_AUTHOR_NAME: notbarze
+          EMAIL: notbarze@users.noreply.github.com
       - name: Save changed files
         run: |
           git diff --name-only origin/master | tee /tmp/changes.filelist.txt
