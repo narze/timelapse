@@ -34,7 +34,7 @@ jobs:
           EMAIL: notbarze@users.noreply.github.com
       - name: Save changed files
         run: |
-          git diff --name-only origin/master | tee /tmp/changes.filelist.txt
+          git diff --name-only origin/main | tee /tmp/changes.filelist.txt
       - name: git push
         run: |
           git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" "$GITHUB_REF"
