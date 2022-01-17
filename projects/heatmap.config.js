@@ -3,6 +3,6 @@ module.exports = /** @type {TimelapseProjectConfig} */ ({
     await page.setViewport({ width: 1280, height: 720 })
 
     await page.goto('https://manoonchai-heatmap.vercel.app')
-    await capture(page, 'home')
+    // await capture(page, 'home')
   },
 })
