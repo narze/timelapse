@@ -34,12 +34,16 @@ jobs:
           GIT_AUTHOR_NAME: notbarze
           EMAIL: notbarze@users.noreply.github.com
       - name: Save changed files
+        if: always()
         run: |
           git diff --name-only origin/main | tee /tmp/changes.filelist.txt
       - name: git push
+        if: always()
         run: |
           git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" "$GITHUB_REF"
-      - run: |
+      - name: Webhook
+        if: always()
+        run: |
           node << 'EOF'
             const fs = require('fs')
             const { execSync } = require('child_process')
