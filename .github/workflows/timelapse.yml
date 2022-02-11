@@ -9,6 +9,7 @@ on:
 jobs:
   timelapse:
     runs-on: ubuntu-20.04
+    continue-on-error: true
     if: |
       (github.event_name == 'workflow_dispatch') ||
       (github.event_name == 'schedule') ||
